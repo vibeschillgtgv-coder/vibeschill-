@@ -190,7 +190,7 @@ export default async (request) => {
       }
     );
   } catch (error) {
-    console.error("Erreur interne lors de la création du paiement.");
+   console.error("Erreur interne lors de la création du paiement :", error?.message || String(error));
 
     return new Response(
       JSON.stringify({ error: "Une erreur est survenue. Réessaie plus tard." }),
